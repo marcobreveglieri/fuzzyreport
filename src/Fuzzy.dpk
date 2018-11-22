@@ -1,0 +1,87 @@
+package Fuzzy;
+
+{$R *.res}
+{$R 'Fr_reg.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Fuzzy Report'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  vcldb,
+  vclsmp,
+  designide,
+  vclimg,
+  dsnap;
+
+contains
+  edExpPar in 'edExpPar.pas' {edParamFct},
+  edExpr in 'edExpr.pas' {ExprEditor},
+  FR_Align in 'FR_Align.pas' {AlignForm},
+  FR_BndEd in 'FR_BndEd.pas' {BandEditorForm},
+  FR_BTyp in 'FR_BTyp.pas' {BandTypesForm},
+  FR_CBar in 'FR_CBar.pas' {CodeBarreForm},
+  FR_Class in 'FR_Class.pas',
+  Fr_color in 'Fr_color.pas',
+  FR_Const in 'FR_Const.pas',
+  FR_Desgn in 'FR_Desgn.pas' {FRDesignerForm},
+  FR_Dopt in 'FR_Dopt.pas' {DocOptForm},
+  Fr_edit in 'Fr_edit.pas' {EditorForm},
+  FR_ERtf in 'FR_ERtf.pas' {RichFilterForm},
+  FR_ETxt in 'FR_ETxt.pas' {TextFilterForm},
+  FR_Ev_ed in 'FR_Ev_ed.pas' {EvForm},
+  FR_Expr in 'FR_Expr.pas',
+  FR_Find in 'FR_Find.pas' {FindForm},
+  FR_Flds in 'FR_Flds.pas' {FieldsForm},
+  FR_FMemo in 'FR_FMemo.pas' {FramedMemoForm},
+  FR_Fmted in 'FR_Fmted.pas' {FmtForm},
+  FR_GEdit in 'FR_GEdit.pas' {GEditorForm},
+  FR_Graph in 'FR_Graph.pas' {FrGraphEditor},
+  FR_GrFld in 'FR_GrFld.pas' {FrGraphFieldEditor},
+  FR_GrpEd in 'FR_GrpEd.pas' {GroupEditorForm},
+  Fr_hilit in 'Fr_hilit.pas' {HilightForm},
+  FR_insp in 'FR_insp.pas' {InspForm},
+  FR_Load in 'FR_Load.pas' {LoadForm},
+  FR_Newrp in 'FR_Newrp.pas' {TemplForm},
+  Fr_ole in 'Fr_ole.pas' {OleForm},
+  FR_Pages in 'FR_Pages.pas' {PagesList},
+  FR_Pgopt in 'FR_Pgopt.pas' {PgoptForm},
+  FR_Prev in 'FR_Prev.pas' {StandardPreview},
+  FR_PrFlt in 'FR_PrFlt.pas' {ProgressFilterForm},
+  Fr_prntr in 'Fr_prntr.pas',
+  FR_Progr in 'FR_Progr.pas' {ProgressForm},
+  Fr_reg in 'Fr_reg.pas',
+  FR_Rich in 'FR_Rich.pas' {RichForm},
+  FR_Save in 'FR_Save.pas' {SaveForm},
+  Fr_Shape in 'Fr_Shape.pas' {FrShapeEditor},
+  FR_Templ in 'FR_Templ.pas' {TemplNewForm},
+  FR_Utils in 'FR_Utils.pas',
+  FR_Var in 'FR_Var.pas' {VarForm},
+  FR_Wizar in 'FR_Wizar.pas' {ReportWizard},
+  FR_EPdf in 'FR_EPdf.pas';
+
+end.
+
